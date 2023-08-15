@@ -5,6 +5,10 @@ if [ ! -z "$VM_HOSTNAME" ]; then
     hostnamectl set-hostname $VM_HOSTNAME
 fi
 
+# Change default mirror
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
+sudo sed -i 's|https://mirrors.edge.kernel.org/ubuntu|http://hu.archive.ubuntu.com/ubuntu|g' /etc/apt/sources.list
+
 # Update packages
 sudo apt update && sudo apt upgrade -y || sudo yum update -y
 
