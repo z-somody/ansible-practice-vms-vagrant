@@ -19,14 +19,19 @@ https://www.vagrantup.com/downloads.html
 Before you run the VMs, make sure to customize the following:
 
 - **Vagrantfile**:
-
-  - Ensure you specify the correct network adapter for bridged networking.
+  - Adjust the VM names by changing the `VM_NAME_X` variables, for example "ubuntu1", "ubuntu2", or "almalinux".  
+  - Replace the NETWORK_ADAPTER placeholder with the name of your primary network adapter for bridged networking. Example: `"Intel(R) Ethernet Connection"`
 
 - **setup.sh**:
   - Replace `YOUR_PUBLIC_SSH_KEY` with your actual public SSH key.
   - (Optional) Modify the `ADMIN_USER` variable if you wish to use a different admin username.
 
-## Launch VMs with Vagrant:
+## Steps to Provision
+
+  - Open a terminal or command prompt.
+  - Navigate to the directory containing the `Vagrantfile`.
+  - Launch Vagrant with the following command to start and provision the virtual machines:
+
 
    ```bash
    vagrant up
