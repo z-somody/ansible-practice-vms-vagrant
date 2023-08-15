@@ -16,7 +16,7 @@ sudo apt update && sudo apt upgrade -y || sudo yum update -y
 if [ -x "$(command -v ufw)" ]; then
     sudo apt install -y ufw
     sudo ufw allow OpenSSH
-    sudo ufw enable
+    echo "y" | sudo ufw enable
     elif [ -x "$(command -v firewall-cmd)" ]; then
     sudo yum install -y firewalld
     sudo systemctl start firewalld
