@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
     ubuntu.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
     end
-    ubuntu.vm.provision "shell", path: "setup.sh", env: {"VM_HOSTNAME" => VM_NAME_1}
+    ubuntu.vm.provision "shell", path: "setup_ubuntu.sh", env: {"VM_HOSTNAME" => VM_NAME_1}
   end
 
   # Second Ubuntu VM Configuration
@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
     ubuntu.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
     end
-    ubuntu.vm.provision "shell", path: "setup.sh", env: {"VM_HOSTNAME" => VM_NAME_2}
+    ubuntu.vm.provision "shell", path: "setup_ubuntu.sh", env: {"VM_HOSTNAME" => VM_NAME_2}
   end
 
   # AlmaLinux VM Configuration
@@ -39,7 +39,7 @@ Vagrant.configure("2") do |config|
     almalinux.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
     end
-    almalinux.vm.provision "shell", path: "setup.sh", env: {"VM_HOSTNAME" => VM_NAME_3}
+    almalinux.vm.provision "shell", path: "setup_almalinux.sh", env: {"VM_HOSTNAME" => VM_NAME_3}
   end
 
 end
