@@ -23,22 +23,22 @@ Before you run the VMs, make sure to customize the following:
 
 ## Launch VMs with Vagrant:
 
-    ```bash
-    vagrant up
-    ```
-
+   ```bash
+   vagrant up
+   ```
+   
 # SSH Access
 
 ## Using Vagrant:
 
-    ```bash
+   ```bash
     vagrant ssh <VM_NAME>
-    ```
+   ```
 
 ## Direct SSH Access:
 
-    ```bash
+   ```bash
     ssh adminuser@<VM_IP>
-    ```
+   ```
 
 - Ensure you've added your private SSH key to your SSH agent or specify it using the -i flag.
