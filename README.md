@@ -31,7 +31,6 @@ Before you run the VMs, make sure to customize the following:
    ```bash
    vagrant up
    ```
-    
 
 # SSH Access
 
