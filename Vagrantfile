@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-
+  
   config.vm.define "ubuntu1" do |ubuntu|
     ubuntu.vm.box = "generic/ubuntu2204"
     ubuntu.vm.hostname = "ubuntu1"

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Set the hostname
 
 if [ ! -z "$VM_HOSTNAME" ]; then
