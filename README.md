@@ -4,10 +4,15 @@ This repository contains Vagrant configurations and provisioning scripts to set 
 
 ## Setup
 
-1. **Clone the Repository**:
+- **Clone the Repository**:
    ```bash
-   git clone <REPO_URL>
+   git clone https://github.com/z-somody/ansible-practice-vms-vagrant.git
    ```
+
+- **Install Vagrant**: 
+https://www.vagrantup.com/downloads.html
+
+- **Create a directory for your VMs**
 
 ## Personalize the Configuration
 
@@ -18,27 +23,28 @@ Before you run the VMs, make sure to customize the following:
   - Ensure you specify the correct network adapter for bridged networking.
 
 - **setup.sh**:
-  - Replace `YOUR_PUBLIC_SSH_KEY` with your actual public SSH key. This key will be used for SSH access to the VM.
+  - Replace `YOUR_PUBLIC_SSH_KEY` with your actual public SSH key.
   - (Optional) Modify the `ADMIN_USER` variable if you wish to use a different admin username.
 
 ## Launch VMs with Vagrant:
 
-    ```bash
-    vagrant up
-    ```
+   ```bash
+   vagrant up
+   ```
+    
 
 # SSH Access
 
 ## Using Vagrant:
 
-    ```bash
-    vagrant ssh <VM_NAME>
-    ```
+   ```bash
+   vagrant ssh <VM_NAME>
+   ```
 
 ## Direct SSH Access:
 
-    ```bash
-    ssh adminuser@<VM_IP>
-    ```
+   ```bash
+   ssh adminuser@<VM_IP>
+   ```
 
 - Ensure you've added your private SSH key to your SSH agent or specify it using the -i flag.
