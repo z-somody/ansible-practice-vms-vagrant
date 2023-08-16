@@ -16,8 +16,7 @@ Vagrant.configure("2") do |config|
     ubuntu.vm.network "public_network", bridge: VM_NETWORK_ADAPTER
     ubuntu.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
-      vb.disk :disk, size: "25000", type: "hdd", format: "VDI"  # Set disk format to VDI and its size to 25 GB
-    end
+      end
     ubuntu.vm.provision "shell", path: "setup_ubuntu.sh", env: {"VM_HOSTNAME" => VM_NAME_1}
   end
 
@@ -28,8 +27,7 @@ Vagrant.configure("2") do |config|
     ubuntu.vm.network "public_network", bridge: VM_NETWORK_ADAPTER
     ubuntu.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
-      vb.disk :disk, size: "25000", type: "hdd", format: "VDI"  # Set disk format to VDI and its size to 25 GB
-    end
+      end
     ubuntu.vm.provision "shell", path: "setup_ubuntu.sh", env: {"VM_HOSTNAME" => VM_NAME_2}
   end
 
@@ -40,8 +38,7 @@ Vagrant.configure("2") do |config|
     almalinux.vm.network "public_network", bridge: VM_NETWORK_ADAPTER
     almalinux.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
-      vb.disk :disk, size: "25000", type: "hdd", format: "VDI"  # Set disk format to VDI and its size to 25 GB
-    end
+      end
     almalinux.vm.provision "shell", path: "setup_almalinux.sh", env: {"VM_HOSTNAME" => VM_NAME_3}
   end
 
